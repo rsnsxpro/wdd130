@@ -1,0 +1,39 @@
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+p {
+  padding: 0;
+}
+
+aside {
+  width: 80%;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  padding: 15px;
+  background-color: #f0f8ff;
+  color: #333;
+  border-radius: 10px;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 30px;
+  border-top: 2px solid #ccc;
+  text-align: center;
+  padding-top: 10px;
+}
