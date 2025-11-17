@@ -33,6 +33,17 @@ nav, p, section, article {
   padding: 8px;
 }
 
+/* Regra adicionada para usar a --secondary-color */
+nav a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Regra adicionada para usar a --accent2-color */
+section {
+  border-bottom: 1px solid var(--accent2-color);
+}
+
 .socialmedia a {
   text-decoration: none;
 }
