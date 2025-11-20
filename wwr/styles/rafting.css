@@ -18,36 +18,61 @@ body {
   color: var(--accent1-color);
 }
 
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
-}
-
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+/* --- ESTRUTURA PRINCIPAL (Atualizada) --- */
+header, main, footer {
+  width: 840px; /* Tamanho fixo solicitado no curso */
+  margin: 0 auto;
 }
 
-/* Regra adicionada para usar a --secondary-color */
+/* --- HEADER (REQUISITO: USAR GRID) --- */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Logo automático, Nav ocupa o resto */
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--accent2-color);
+}
+
+/* Ajuste para o logo não ficar gigante */
+header img {
+  max-width: 150px; 
+  height: auto;
+}
+
+/* --- NAV (REQUISITO: USAR FLEX) --- */
+nav {
+  display: flex;
+  justify-content: space-around; /* Espalha os links */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--accent1-color);
+  padding: 10px;
+  font-weight: bold;
+}
+
 nav a:hover {
   background-color: var(--secondary-color);
   color: #fff;
 }
 
-/* Regra adicionada para usar a --accent2-color */
+/* --- MAIN CONTENT --- */
+p, section, article {
+  margin: 16px 0; /* Ajustei para margem vertical apenas */
+  padding: 8px;
+}
+
 section {
   border-bottom: 1px solid var(--accent2-color);
 }
 
-.socialmedia a {
-  text-decoration: none;
-}
-
+/* --- HERO SECTION (Mantida do seu código) --- */
 .hero {
   position: relative;
 }
@@ -82,8 +107,13 @@ section {
 .hero article img {
   float: right;
   width: 125px;
+  margin-left: 10px; /* Pequeno espaço extra */
 }
 
-.socialmedia img {
-  width: 32px;
-}
+/* --- GALERIA DE AVENTURAS (NOVO: REQUISITO SEMANA 04) --- */
+.gallery {
+  display: flex;
+  justify-content: space-between; /* Espalha as 5 imagens */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px
